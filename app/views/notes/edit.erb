@@ -1,0 +1,22 @@
+<h2>Edit Note:</h2>
+<br>
+<form action="/notes/<%=@note.id%>" method="POST">
+<input id="hidden" type="hidden" name="_method" value="PATCH">
+  <label for="note_title">Title:</label><br>
+  <input type="text" name="note[title]" value="<%= @note.title %>">
+  <br>
+  <br>
+  <label for="note_content">Content:</label><br>
+  <textarea id="note_content" name="note[content]" rows="10" cols="33"><%= @note.content %></textarea>
+  <br>
+  <input type="submit" value="Update Note">
+</form>
+<br>
+<br>
+  <form action="/notes/<%=@note.id%>/delete" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Note">
+  </form>
+<br>
+<a class="button" href="/notes">My Notes</a><br>
+<a href="/logout">Log Out</a>

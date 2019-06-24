@@ -1,0 +1,13 @@
+<h2>Note</h2>
+<p id="content-title"><%= @note.title %>:<p>
+<p><%= @note.content %></p>
+<a href="/notes/<%= @note.id %>/edit">Edit Note</a>
+<br>
+<br>
+  <form action="/notes/<%=@note.id%>/delete" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete note">
+  </form>
+<br>
+<a class="button" href="/notes">My Notes</a><br>
+<a class="button" href="/logout">Log Out</a>
