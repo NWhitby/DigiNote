@@ -113,3 +113,8 @@
     line-height: 24px;
   }
 }
+
+#content-body {
+  text-decoration: none;
+  color: black;
+}

@@ -30,6 +30,12 @@ class NotesController < ApplicationController
    end
  end
 
+ get '/notes/:id' do
+   redirect_if_not_logged_in
+   @note = Note.find_by(id: params[:id])
+   erb :'/notes/show'
+ end
+
  get '/notes/:id/edit' do
    redirect_if_not_logged_in
    @note = Note.find_by(id: params[:id])
@@ -54,15 +60,6 @@ class NotesController < ApplicationController
        end
      end
    end
- end
-
- delete '/notes/:id/delete' do
-   redirect_if_not_logged_in
-   @note = Note.find_by(id: params["id"])
-     if @note && @note.user == current_user
-       @note.destroy
-     end
-   redirect to '/notes'
  end
 
  delete '/notes/:id/delete' do
