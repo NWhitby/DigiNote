@@ -47,7 +47,7 @@ class NotesController < ApplicationController
    else
      @note = Note.find_by(id: params[:id])
      if @note && @note.user == current_user
-       if @note.update(title: params["note"]["title"], content: params["note"]["content"])         
+       if @note.update(title: params["note"]["title"], content: params["note"]["content"])
          redirect to '/notes'
        else
          redirect to '/notes'
@@ -56,7 +56,22 @@ class NotesController < ApplicationController
    end
  end
 
+ delete '/notes/:id/delete' do
+   redirect_if_not_logged_in
+   @note = Note.find_by(id: params["id"])
+     if @note && @note.user == current_user
+       @note.destroy
+     end
+   redirect to '/notes'
+ end
 
-
+ delete '/notes/:id/delete' do
+   redirect_if_not_logged_in
+   @note = Note.find_by(id: params["id"])
+     if @note && @note.user == current_user
+       @note.destroy
+     end   
+   redirect to '/notes'
+ end
 
 end
