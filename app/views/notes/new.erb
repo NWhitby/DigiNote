@@ -1,0 +1,14 @@
+<h2>Create New Note:</h2>
+<br>
+<form method="POST" action="/notes">
+  <label for="note_title">Title:</label><br>
+  <input type="text" name="note[title]"/><br><br>
+  <label for="note_content">Content:</label><br>
+<textarea id="note_content" name="note[content]"rows="5" cols="33">
+</textarea>
+<br>
+  <input type="submit" value="Submit">
+</form>
+<br>
+<a class="button" href="/notes">My Notes</a><br>
+<a class="button" href="/logout">Log Out</a>

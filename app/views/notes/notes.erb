@@ -1,0 +1,16 @@
+<h1>Welcome, <%= current_user.username %>!</h1>
+<br>
+<h2>My Notes</h2>
+<p>Click Note to Edit or Delete</p>
+
+<% current_user.notes.each do |note| %>
+  <ul>
+    <li><a href="/notes/<%=note.id%>" id="content-body"><p><%= note.title %>:</p><%= note.content %></a></li>
+    <br>
+    <br>
+  </ul>
+<% end %>
+
+<br>
+<a href="/notes/new">New Note</a><br>
+<a href="/logout">Log Out</a>
