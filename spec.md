@@ -6,12 +6,12 @@ Specs:
 - [x] Include more than one model class (e.g. User, Post, Category) - Includes User and Note model classes
 - [x] Include at least one has_many relationship on your User model (e.g. User has_many Posts) - User has_many notes
 - [x] Include at least one belongs_to relationship on another model (e.g. Post belongs_to User) - Note belongs_to a User
-- [x] Include user accounts with unique login attribute (username or email) - User accounts contain username and email attributes for account creation and login.
+- [x] Include user accounts with unique login attribute (username or email) - User accounts contain username and email attributes for account creation and login
 - [x] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying - The belongs_to (Note) models routes can create, read, update, and delete resources
 - [x] Ensure that users can't modify content created by other users -  User account authentication added via Bcrypt and has_secure_password
 - [x] Include user input validations - Validation for username, email, and password added to User model
 - [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
-- [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code - README.md includes install instructions, contributors guide, and like to MIT license
+- [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code - README.md includes install instructions, contributors guide, and link to MIT license
 
 Confirm
 - [x] You have a large number of small Git commits
