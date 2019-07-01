@@ -6,9 +6,10 @@
 
 <% current_user.notes.each do |note| %>
   <ul>
-    <li><a href="/notes/<%=note.id%>" id="content-body"><p><%= note.title %></p><%= note.content %></a></li>
-    <br>
-    <br>
+    <li><a href="/notes/<%=note.id%>" id="content-body">
+    <p><%= note.title %></p>
+    <%= note.content %><br><br>
+    </a>Created By: <%= note.user.username %></li><br><br>
   </ul>
 <% end %>
 

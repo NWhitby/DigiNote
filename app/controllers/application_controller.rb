@@ -24,11 +24,15 @@ class ApplicationController < Sinatra::Base
     end
 
     def redirect_if_not_logged_in
-      if !logged_in?        
+      if !logged_in?
         redirect to '/login'
       end
     end
 
+    def redirect_if_not_allowed
+      if !@note || @note.user != current_user
+        redirect to '/notes'
+      end
+    end
   end
-
 end

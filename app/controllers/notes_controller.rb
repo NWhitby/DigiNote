@@ -39,11 +39,8 @@ class NotesController < ApplicationController
  get '/notes/:id/edit' do
    redirect_if_not_logged_in
    @note = Note.find_by(id: params[:id])
-   if @note && @note.user == current_user
+   redirect_if_not_allowed
      erb :'/notes/edit'
-   else
-     redirect to '/notes'
-   end
  end
 
  patch '/notes/:id' do
@@ -52,23 +49,21 @@ class NotesController < ApplicationController
      redirect to '/notes/:id/edit'
    else
      @note = Note.find_by(id: params[:id])
-     if @note && @note.user == current_user
+     redirect_if_not_allowed
        if @note.update(title: params["note"]["title"], content: params["note"]["content"])
          redirect to '/notes'
        else
          redirect to '/notes'
        end
      end
-   end
  end
 
  delete '/notes/:id/delete' do
    redirect_if_not_logged_in
    @note = Note.find_by(id: params["id"])
-     if @note && @note.user == current_user
+    redirect_if_not_allowed
        @note.destroy
-     end   
    redirect to '/notes'
- end
+  end
 
 end
