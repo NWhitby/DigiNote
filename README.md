@@ -8,7 +8,7 @@ DigiNote is a Sinatra based Content Management System (CMS) that allows a user t
 
 ## Contributing
 
-In the interest of embracing the open source community, contributions are greatly appreciated! Ideas, changes, corrections, and additional features are encouraged! Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/DigiNote-Sinatra-App.
+In the interest of embracing the open source community, contributions are greatly appreciated! Ideas, changes, corrections, and additional features are encouraged! Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/DigiNote.
 
 ## License
 
