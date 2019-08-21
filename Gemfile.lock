@@ -45,7 +45,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     mustermann (1.0.3)
-    nokogiri (1.10.3)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -117,6 +117,7 @@ DEPENDENCIES
   bcrypt
   capybara
   database_cleaner!
+  nokogiri (>= 1.10.4)
   pry
   rack-flash3
   rack-test
@@ -131,4 +132,4 @@ DEPENDENCIES
   tux
 
 BUNDLED WITH
-   2.0.1
+   2.0.2
